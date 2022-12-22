@@ -1,18 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
 	public float maxHealth = 3f;
-	private float currentHealth;
+	public float currentHealth;
 
 	public float moveSpeed = 5f;
-	Rigidbody2D rb;
 	Transform target;
-
 	PlayerController playerController;
-	private Vector2 moveDirection;
 
 	// Start is called before the first frame update
 	void Start()
@@ -24,11 +22,11 @@ public class Enemy : MonoBehaviour
 
 	private void Awake()
 	{
-		rb = GetComponent<Rigidbody2D>();
+		currentHealth = maxHealth;
 	}
-
+	/*
 	private void Update()
-	{
+	{	
 		if (target)
 		{
 			Vector3 direction = (target.position - transform.position).normalized;
@@ -36,8 +34,9 @@ public class Enemy : MonoBehaviour
 			rb.rotation = angle;
 			moveDirection = direction;
 		}
+		
 	}
-
+	
 	private void FixedUpdate()
 	{
 		if (target)
@@ -45,13 +44,15 @@ public class Enemy : MonoBehaviour
 			rb.velocity = new Vector2(moveDirection.x, moveDirection.y) * moveSpeed;
 		}
 	}
+	*/
 	public void TakeDamage(float damageAmount)
 	{
 		currentHealth -= damageAmount;
 
 		if (currentHealth <= 0)
 		{
-			Destroy(gameObject);
+			Disable();
+			currentHealth = maxHealth;
 		}
 	}
 
@@ -61,5 +62,11 @@ public class Enemy : MonoBehaviour
 		{
 			playerController.TakeDamage(1);
 		}
+	}
+
+	public void Disable()
+	{
+		gameObject.SetActive(false);
+		currentHealth = maxHealth;
 	}
 }

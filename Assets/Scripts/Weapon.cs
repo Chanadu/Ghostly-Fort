@@ -8,7 +8,7 @@ public class Weapon : MonoBehaviour
 	public float fireForce;
 	public void Fire()
 	{
-		GameObject obj = ObjectPooler.current.GetPooledObject();
+		GameObject obj = ProjectilePooler.current.GetPooledObject();
 		if (obj == null)
 		{
 			return;
