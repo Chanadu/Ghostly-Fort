@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+	public static PlayerController current;
 	public Camera sceneCamera;
 	public float moveSpeed;
 	public Rigidbody2D rb;
 	public Weapon weapon;
+	public Sprite[] weaponSprites;
 
 	public float health, maxHealth;
 	public float damageTickCooldown;
@@ -15,11 +17,24 @@ public class PlayerController : MonoBehaviour
 	private Vector2 moveDirection;
 	private Vector2 mousePosition;
 
-
-	private void Start()
+	public IDictionary<int, Sprite> numToSprite;
+	public int currentWeapon = 0;
+	public SpriteRenderer weaponSpriteRenderer;
+	void Start()
 	{
+		current = this;
 		health = maxHealth;
+		numToSprite = new Dictionary<int, Sprite>()
+		{
+			{0, weaponSprites[0]},
+			{1, weaponSprites[1]},
+			{2, weaponSprites[2]},
+			{3, weaponSprites[3]}
+		};
+
+		weaponSpriteRenderer.sprite = numToSprite[currentWeapon];
 	}
+
 	void Update()
 	{
 		ProcessInputs();
@@ -39,6 +54,15 @@ public class PlayerController : MonoBehaviour
 		if (Input.GetMouseButtonDown(0))
 		{
 			weapon.Fire();
+		}
+		if (Input.GetMouseButtonDown(1))
+		{
+			currentWeapon++;
+			if (currentWeapon >= 4)
+			{
+				currentWeapon = 0;
+			}
+			weaponSpriteRenderer.sprite = numToSprite[currentWeapon];
 		}
 		moveDirection = new Vector2(moveX, moveY).normalized;
 		mousePosition = sceneCamera.ScreenToWorldPoint(Input.mousePosition);
@@ -70,4 +94,5 @@ public class PlayerController : MonoBehaviour
 			currentDamageCooldown -= Time.deltaTime;
 		}
 	}
+
 }

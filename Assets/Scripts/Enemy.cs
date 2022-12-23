@@ -5,19 +5,18 @@ using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
-	public float maxHealth = 3f;
+	public float maxHealth;
 	public float currentHealth;
-
-	public float moveSpeed = 5f;
 	Transform target;
-	PlayerController playerController;
+	public int enemyType = 0;
 
 	// Start is called before the first frame update
 	void Start()
 	{
 		currentHealth = maxHealth;
 		target = GameObject.FindGameObjectWithTag("Player").transform;
-		playerController = target.GetComponent<PlayerController>();
+		PlayerController.current = target.GetComponent<PlayerController>();
+		GetComponent<SpriteRenderer>().sprite = PlayerController.current.numToSprite[enemyType];
 	}
 
 	private void Awake()
@@ -60,7 +59,7 @@ public class Enemy : MonoBehaviour
 	{
 		if (other.gameObject.CompareTag("Player"))
 		{
-			playerController.TakeDamage(1);
+			PlayerController.current.TakeDamage(1);
 		}
 	}
 

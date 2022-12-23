@@ -7,7 +7,7 @@ public class Projectile : MonoBehaviour
 	public Rigidbody2D rb;
 	public float timeToDisable;
 	private float currentTime;
-
+	public int type;
 	private void OnEnable()
 	{
 		currentTime = timeToDisable;
@@ -33,9 +33,12 @@ public class Projectile : MonoBehaviour
 				Disable();
 				break;
 			case "Enemy":
-				Enemy enemy = other.gameObject.GetComponent<Enemy>();
-				enemy.TakeDamage(1);
-				Disable();
+				if (other.gameObject.GetComponent<Enemy>().enemyType == type)
+				{
+					Enemy enemy = other.gameObject.GetComponent<Enemy>();
+					enemy.TakeDamage(1);
+					Disable();
+				}
 				break;
 		}
 	}

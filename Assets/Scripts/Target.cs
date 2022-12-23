@@ -27,9 +27,7 @@ public class Target : MonoBehaviour
 	{
 		if (other.gameObject.CompareTag("Enemy"))
 		{
-			currentTargetHealth -= 10;
-			Enemy e = other.gameObject.GetComponent<Enemy>();
-			e.TakeDamage(1);
+			currentTargetHealth -= 5;
 		}
 	}
 }

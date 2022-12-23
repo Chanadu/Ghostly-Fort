@@ -9,8 +9,9 @@ public class ProjectilePooler : MonoBehaviour
 	public Transform pooledObjectHolder;
 	public int pooledAmount;
 	public bool willGrow;
-
 	private List<GameObject> pooledObjects;
+
+	public List<Sprite> projectileSprites;
 
 	// Start is called before the first frame update
 	void Start()
@@ -23,6 +24,7 @@ public class ProjectilePooler : MonoBehaviour
 			obj.SetActive(false);
 			obj.transform.SetParent(pooledObjectHolder, true);
 			pooledObjects.Add(obj);
+
 		}
 	}
 
@@ -32,6 +34,8 @@ public class ProjectilePooler : MonoBehaviour
 		{
 			if (!pooledObjects[i].activeInHierarchy)
 			{
+				pooledObjects[i].GetComponent<SpriteRenderer>().sprite = projectileSprites[PlayerController.current.currentWeapon];
+				pooledObjects[i].GetComponent<Projectile>().type = PlayerController.current.currentWeapon;
 				return pooledObjects[i];
 			}
 		}
@@ -40,6 +44,8 @@ public class ProjectilePooler : MonoBehaviour
 		{
 			GameObject obj = Instantiate(pooledObject);
 			obj.transform.SetParent(pooledObjectHolder, true);
+			obj.GetComponent<SpriteRenderer>().sprite = projectileSprites[PlayerController.current.currentWeapon];
+			obj.GetComponent<Projectile>().type = PlayerController.current.currentWeapon;
 			pooledObjects.Add(obj);
 			return obj;
 		}

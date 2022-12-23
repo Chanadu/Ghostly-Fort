@@ -5,20 +5,11 @@ using UnityEngine;
 public class HeartBar : MonoBehaviour
 {
 	public GameObject heartPrefab;
-	private PlayerController player;
 	private List<Heart> hearts = new List<Heart>();
 
 	private void Update()
 	{
 		DrawHearts();
-	}
-	private void Awake()
-	{
-		player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
-		if (!player)
-		{
-			Debug.Log("NO player");
-		}
 	}
 
 	public void ClearHearts()
@@ -43,8 +34,8 @@ public class HeartBar : MonoBehaviour
 
 	public void DrawHearts()
 	{
-		float maxHealthRemainder = player.maxHealth % 2;
-		int heartsToMake = (int)((player.maxHealth / 2) + maxHealthRemainder);
+		float maxHealthRemainder = PlayerController.current.maxHealth % 2;
+		int heartsToMake = (int)((PlayerController.current.maxHealth / 2) + maxHealthRemainder);
 
 		for (int i = 0; i < heartsToMake; i++)
 		{
@@ -53,7 +44,7 @@ public class HeartBar : MonoBehaviour
 
 		for (int i = 0; i < hearts.Count; i++)
 		{
-			int heartStatusRemainder = (int)Mathf.Clamp(player.health - (i * 2), 0, 2);
+			int heartStatusRemainder = (int)Mathf.Clamp(PlayerController.current.health - (i * 2), 0, 2);
 			hearts[i].SetHeartImage((HeartStatus)heartStatusRemainder);
 		}
 	}
