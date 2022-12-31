@@ -9,6 +9,7 @@ public class EnemySpawner : MonoBehaviour
 	public float startingSpawnTime;
 	public float timeToSpawn;
 	private float currentTimeToSpawn;
+	public float speedUpTime = 0.2f;
 	// Start is called before the first frame update
 	void Start()
 	{
@@ -30,6 +31,11 @@ public class EnemySpawner : MonoBehaviour
 		else
 		{
 			SpawnObject();
+
+			if (timeToSpawn > 2)
+			{
+				timeToSpawn -= speedUpTime;
+			}
 			currentTimeToSpawn = timeToSpawn;
 		}
 	}

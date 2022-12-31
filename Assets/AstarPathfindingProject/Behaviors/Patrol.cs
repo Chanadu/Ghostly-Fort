@@ -45,7 +45,7 @@ namespace Pathfinding {
 			}
 
 			if (Time.time >= switchTime) {
-				index = index + 1;
+				index++;
 				search = true;
 				switchTime = float.PositiveInfinity;
 			}

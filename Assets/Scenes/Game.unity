@@ -503,6 +503,7 @@ MonoBehaviour:
   objectToSpawnParent: {fileID: 199716354}
   startingSpawnTime: 0
   timeToSpawn: 7
+  speedUpTime: 0.2
 --- !u!1 &364372282
 GameObject:
   m_ObjectHideFlags: 0
@@ -672,6 +673,84 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &515642878
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 515642879}
+  - component: {fileID: 515642881}
+  - component: {fileID: 515642880}
+  m_Layer: 5
+  m_Name: ScoreText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &515642879
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515642878}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1172181026}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 166.6, y: 21.5}
+  m_SizeDelta: {x: 333.19635, y: 43.166702}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &515642880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515642878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 32
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 72
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Score: 100'
+--- !u!222 &515642881
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515642878}
+  m_CullTransparentMesh: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1409,6 +1488,7 @@ MonoBehaviour:
   objectToSpawnParent: {fileID: 199716354}
   startingSpawnTime: 5.25
   timeToSpawn: 7
+  speedUpTime: 0.2
 --- !u!4 &1027741554
 Transform:
   m_ObjectHideFlags: 0
@@ -1515,6 +1595,7 @@ RectTransform:
   m_Children:
   - {fileID: 185960027}
   - {fileID: 1725342774}
+  - {fileID: 515642879}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1862,6 +1943,7 @@ GameObject:
   - component: {fileID: 1667277342}
   - component: {fileID: 1667277341}
   - component: {fileID: 1667277343}
+  - component: {fileID: 1667277344}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1927,6 +2009,20 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 8b42fbb1bb0d76e44ab919da83ca62ce, type: 3}
   - {fileID: 21300000, guid: 7d30ce2dc2d9c99489a9b3e53db79bbf, type: 3}
   - {fileID: 21300000, guid: 10af0f8b65e06f6439098fa440575300, type: 3}
+--- !u!114 &1667277344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667277340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0894648162a0a6648b3d40d25c11580b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 515642880}
+  score: 0
 --- !u!1 &1725342773
 GameObject:
   m_ObjectHideFlags: 0
@@ -1939,7 +2035,7 @@ GameObject:
   - component: {fileID: 1725342776}
   - component: {fileID: 1725342775}
   m_Layer: 5
-  m_Name: Text
+  m_Name: TargetHealthScore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2039,6 +2135,7 @@ MonoBehaviour:
   objectToSpawnParent: {fileID: 199716354}
   startingSpawnTime: 3.5
   timeToSpawn: 7
+  speedUpTime: 0.2
 --- !u!4 &1919188805
 Transform:
   m_ObjectHideFlags: 0
@@ -2087,6 +2184,7 @@ MonoBehaviour:
   objectToSpawnParent: {fileID: 199716354}
   startingSpawnTime: 1.75
   timeToSpawn: 7
+  speedUpTime: 0.2
 --- !u!4 &1968202378
 Transform:
   m_ObjectHideFlags: 0

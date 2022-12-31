@@ -1,0 +1,39 @@
+Things TODO
+
+- Coins spawn around to get more score
+- End Game Screen
+	- On Player Health Gone
+	- On Safe Health Gone
+	- Final Score gained by time + enemies killed
+- Draw Artwork
+	- Player
+		- All Turning Directions
+		-Weapon and Ammo
+			- All Colors
+	- Enemies
+		- All Colors
+		- All Turning Directions
+	- Icons
+		- Health
+			- Hearts
+			-Background
+		- Ammo Changing Buttons
+			- All Colors
+	- Backgrounds
+		- Title Screen
+		- Game
+		- Credits
+		- Settings
+	- Fort
+	- Flag
+- Tutorial
+	- Shooting and Moving Mechanics
+		- Different Colors
+			- Switching between Ammos
+
+- Title Screen
+	- Title
+	- Settings Button
+	- Credits Button
+	- Play Button
+	- Tutorial Button

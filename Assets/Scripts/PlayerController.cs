@@ -64,6 +64,27 @@ public class PlayerController : MonoBehaviour
 			}
 			weaponSpriteRenderer.sprite = numToSprite[currentWeapon];
 		}
+		if (Input.GetKeyDown(KeyCode.Alpha1))
+		{
+			currentWeapon = 0;
+			weaponSpriteRenderer.sprite = numToSprite[currentWeapon];
+		}
+		if (Input.GetKeyDown(KeyCode.Alpha2))
+		{
+			currentWeapon = 1;
+			weaponSpriteRenderer.sprite = numToSprite[currentWeapon];
+		}
+		if (Input.GetKeyDown(KeyCode.Alpha3))
+		{
+			currentWeapon = 2;
+			weaponSpriteRenderer.sprite = numToSprite[currentWeapon];
+		}
+		if (Input.GetKeyDown(KeyCode.Alpha4))
+		{
+			currentWeapon = 3;
+			weaponSpriteRenderer.sprite = numToSprite[currentWeapon];
+		}
+
 		moveDirection = new Vector2(moveX, moveY).normalized;
 		mousePosition = sceneCamera.ScreenToWorldPoint(Input.mousePosition);
 	}

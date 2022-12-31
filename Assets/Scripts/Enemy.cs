@@ -9,7 +9,9 @@ public class Enemy : MonoBehaviour
 	public float currentHealth;
 	Transform target;
 	public int enemyType = 0;
-
+	public bool attackingFort = false;
+	private readonly float timeToAttack = 2f;
+	private float currentTimeToAttack = 0;
 	// Start is called before the first frame update
 	void Start()
 	{
@@ -18,32 +20,31 @@ public class Enemy : MonoBehaviour
 		PlayerController.current = target.GetComponent<PlayerController>();
 		GetComponent<SpriteRenderer>().sprite = PlayerController.current.numToSprite[enemyType];
 	}
-
 	private void Awake()
 	{
 		currentHealth = maxHealth;
 	}
-	/*
+
 	private void Update()
-	{	
-		if (target)
-		{
-			Vector3 direction = (target.position - transform.position).normalized;
-			float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f;
-			rb.rotation = angle;
-			moveDirection = direction;
-		}
-		
-	}
-	
-	private void FixedUpdate()
 	{
-		if (target)
+		if (attackingFort && gameObject.activeInHierarchy)
 		{
-			rb.velocity = new Vector2(moveDirection.x, moveDirection.y) * moveSpeed;
+			AttackFort();
 		}
 	}
-	*/
+
+	private void AttackFort()
+	{
+		if (currentTimeToAttack > 0)
+		{
+			currentTimeToAttack -= Time.deltaTime;
+		}
+		else
+		{
+			Target.current.currentTargetHealth -= 5;
+			currentTimeToAttack = timeToAttack;
+		}
+	}
 	public void TakeDamage(float damageAmount)
 	{
 		currentHealth -= damageAmount;
@@ -67,5 +68,8 @@ public class Enemy : MonoBehaviour
 	{
 		gameObject.SetActive(false);
 		currentHealth = maxHealth;
+		attackingFort = false;
+		currentTimeToAttack = timeToAttack;
+		Score.current.score += 10;
 	}
 }

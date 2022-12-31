@@ -129,6 +129,7 @@ MonoBehaviour:
   maxHealth: 1
   currentHealth: 0
   enemyType: 0
+  attackingFort: 0
 --- !u!50 &5383940261726717867
 Rigidbody2D:
   serializedVersion: 4
@@ -164,7 +165,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   drawGizmos: 1
-  detailedGizmos: 0
+  detailedGizmos: 1
   startEndModifier:
     addPoints: 0
     exactStartPoint: 3
@@ -207,8 +208,8 @@ MonoBehaviour:
   autoRepath:
     mode: 2
     interval: 0.25
-    sensitivity: 20
-    maximumInterval: 1
+    sensitivity: 1
+    maximumInterval: 2
     visualizeSensitivity: 1
   targetCompatibility: {fileID: 0}
   maxAcceleration: -2.5
@@ -217,7 +218,7 @@ MonoBehaviour:
   pickNextWaypointDist: 0.5
   endReachedDistance: 0
   alwaysDrawGizmos: 1
-  slowWhenNotFacingTarget: 0
+  slowWhenNotFacingTarget: 1
   whenCloseToDestination: 1
   constrainInsideGraph: 0
 --- !u!114 &2720030919684132424
