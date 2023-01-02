@@ -36,7 +36,7 @@ public class EnemyPooler : MonoBehaviour
 			{
 				GameObject obj = pooledObjects[i];
 				Enemy enemy = obj.GetComponent<Enemy>();
-				int r = Random.Range(0, 4);
+				int r = Random.Range(0, 3);
 				enemy.enemyType = r;
 				obj.GetComponent<SpriteRenderer>().sprite = enemySprites[r];
 				return obj;
@@ -49,7 +49,7 @@ public class EnemyPooler : MonoBehaviour
 			Enemy enemy = obj.GetComponent<Enemy>();
 			enemy.currentHealth = enemy.maxHealth;
 			obj.transform.SetParent(pooledObjectHolder, true);
-			int r = Random.Range(0, 4);
+			int r = Random.Range(0, 3);
 			enemy.enemyType = r;
 			obj.GetComponent<SpriteRenderer>().sprite = enemySprites[r];
 			pooledObjects.Add(obj);

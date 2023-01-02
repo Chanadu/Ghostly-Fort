@@ -18,7 +18,6 @@ public class Enemy : MonoBehaviour
 		currentHealth = maxHealth;
 		target = GameObject.FindGameObjectWithTag("Player").transform;
 		PlayerController.current = target.GetComponent<PlayerController>();
-		GetComponent<SpriteRenderer>().sprite = PlayerController.current.numToSprite[enemyType];
 	}
 	private void Awake()
 	{
@@ -31,6 +30,11 @@ public class Enemy : MonoBehaviour
 		{
 			AttackFort();
 		}
+	}
+
+	private void FixedUpdate()
+	{
+
 	}
 
 	private void AttackFort()

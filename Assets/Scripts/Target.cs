@@ -23,7 +23,7 @@ public class Target : MonoBehaviour
 		targetText.text = "Target Health: " + currentTargetHealth + "/" + startingTargetHealth;
 	}
 
-	private void OnCollisionEnter2D(Collision2D other)
+	private void OnTriggerEnter2D(Collider2D other)
 	{
 		if (other.gameObject.CompareTag("Enemy"))
 		{

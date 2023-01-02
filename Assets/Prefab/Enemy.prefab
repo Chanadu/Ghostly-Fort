@@ -77,7 +77,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7d30ce2dc2d9c99489a9b3e53db79bbf, type: 3}
+  m_Sprite: {fileID: -6218524336908003064, guid: 766985ada69eeaa4596acc2776bc8c59,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -126,7 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca31b711a5b8dfa47a61ef1ff2b21469, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 1
+  maxHealth: 2
   currentHealth: 0
   enemyType: 0
   attackingFort: 0

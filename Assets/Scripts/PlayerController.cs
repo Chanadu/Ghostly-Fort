@@ -29,7 +29,6 @@ public class PlayerController : MonoBehaviour
 			{0, weaponSprites[0]},
 			{1, weaponSprites[1]},
 			{2, weaponSprites[2]},
-			{3, weaponSprites[3]}
 		};
 
 		weaponSpriteRenderer.sprite = numToSprite[currentWeapon];
@@ -58,7 +57,7 @@ public class PlayerController : MonoBehaviour
 		if (Input.GetMouseButtonDown(1))
 		{
 			currentWeapon++;
-			if (currentWeapon >= 4)
+			if (currentWeapon >= 3)
 			{
 				currentWeapon = 0;
 			}
@@ -77,11 +76,6 @@ public class PlayerController : MonoBehaviour
 		if (Input.GetKeyDown(KeyCode.Alpha3))
 		{
 			currentWeapon = 2;
-			weaponSpriteRenderer.sprite = numToSprite[currentWeapon];
-		}
-		if (Input.GetKeyDown(KeyCode.Alpha4))
-		{
-			currentWeapon = 3;
 			weaponSpriteRenderer.sprite = numToSprite[currentWeapon];
 		}
 
