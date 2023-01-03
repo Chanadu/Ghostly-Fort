@@ -71,6 +71,7 @@ public class EnemySpawner : MonoBehaviour
 			obj.SetActive(true);
 			obj.transform.SetParent(objectToSpawnParent, true);
 			obj.transform.SetPositionAndRotation(transform.position, Quaternion.identity);
+			obj.transform.position = new Vector3(obj.transform.position.x, obj.transform.position.y, 0);
 		}
 	}
 }

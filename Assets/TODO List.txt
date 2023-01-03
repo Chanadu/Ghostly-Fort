@@ -1,7 +1,5 @@
 Things TODO
 
-- Coins spawn around to get more score
-- Make Every Enemy Type have different ranges of speeds 
 - End Game Screen
 	- On Player Health Gone
 	- On Safe Health Gone
@@ -9,10 +7,8 @@ Things TODO
 - Draw Artwork
 	- Backgrounds
 		- Title Screen
-		- Game
 		- Credits
 		- Settings
-	- Fort
 - Tutorial
 	- Shooting and Moving Mechanics
 		- Different Colors

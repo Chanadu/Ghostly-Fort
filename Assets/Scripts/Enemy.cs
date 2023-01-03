@@ -22,6 +22,18 @@ public class Enemy : MonoBehaviour
 		currentHealth = maxHealth;
 		player = PlayerController.current;
 		target = GameObject.FindGameObjectWithTag("Target").transform;
+		switch (enemyType)
+		{
+			case 0:
+				moveSpeed = Random.Range(1f, 2f);
+				break;
+			case 1:
+				moveSpeed = Random.Range(2f, 3f);
+				break;
+			case 2:
+				moveSpeed = Random.Range(3f, 4f);
+				break;
+		}
 		moveSpeed = Random.Range(2f, 4f);
 	}
 	private void Awake()

@@ -62,21 +62,25 @@ public class PlayerController : MonoBehaviour
 				currentWeapon = 0;
 			}
 			weaponSpriteRenderer.sprite = numToSprite[currentWeapon];
+			ProjectileIcons.current.Switched(currentWeapon);
 		}
 		if (Input.GetKeyDown(KeyCode.Alpha1))
 		{
 			currentWeapon = 0;
 			weaponSpriteRenderer.sprite = numToSprite[currentWeapon];
+			ProjectileIcons.current.Switched(currentWeapon);
 		}
 		if (Input.GetKeyDown(KeyCode.Alpha2))
 		{
 			currentWeapon = 1;
 			weaponSpriteRenderer.sprite = numToSprite[currentWeapon];
+			ProjectileIcons.current.Switched(currentWeapon);
 		}
 		if (Input.GetKeyDown(KeyCode.Alpha3))
 		{
 			currentWeapon = 2;
 			weaponSpriteRenderer.sprite = numToSprite[currentWeapon];
+			ProjectileIcons.current.Switched(currentWeapon);
 		}
 
 		moveDirection = new Vector2(moveX, moveY).normalized;
