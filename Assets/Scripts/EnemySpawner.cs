@@ -7,19 +7,41 @@ public class EnemySpawner : MonoBehaviour
 	public GameObject objectToSpawn;
 	public Transform objectToSpawnParent;
 	public float startingSpawnTime;
+	public Transform[] target;
+	private float speed;
+	public int current;
 	public float timeToSpawn;
 	private float currentTimeToSpawn;
-	public float speedUpTime = 0.2f;
 	// Start is called before the first frame update
 	void Start()
 	{
-		currentTimeToSpawn = startingSpawnTime;
+		timeToSpawn = Random.Range(4.0f, 7.0f);
+		currentTimeToSpawn = timeToSpawn;
+		current = 0;
+		speed = Random.Range(2, 7);
 	}
 
 	// Update is called once per frame
 	void Update()
 	{
 		UpdateTimer();
+	}
+
+	private void FixedUpdate()
+	{
+		if (!target[current].position.Equals(transform.position))
+		{
+			transform.position = Vector3.MoveTowards(transform.position, target[current].position, speed * Time.deltaTime);
+		}
+		else
+		{
+			current++;
+			if (current == target.Length)
+			{
+				current = 0;
+			}
+		}
+
 	}
 
 	private void UpdateTimer()
@@ -34,7 +56,8 @@ public class EnemySpawner : MonoBehaviour
 
 			if (timeToSpawn > 2)
 			{
-				timeToSpawn -= speedUpTime;
+				Random.Range(3.0f, 7.0f);
+				timeToSpawn -= Random.Range(0.01f, 0.3f);
 			}
 			currentTimeToSpawn = timeToSpawn;
 		}

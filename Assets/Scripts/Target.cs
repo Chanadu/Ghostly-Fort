@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Target : MonoBehaviour
 {
 	public static Target current;
-	public Text targetText;
+	public TMPro.TextMeshProUGUI targetText;
 	public int startingTargetHealth;
 	public int currentTargetHealth;
 
@@ -23,7 +23,7 @@ public class Target : MonoBehaviour
 		targetText.text = "Target Health: " + currentTargetHealth + "/" + startingTargetHealth;
 	}
 
-	private void OnTriggerEnter2D(Collider2D other)
+	private void OnCollisionEnter2D(Collision2D other)
 	{
 		if (other.gameObject.CompareTag("Enemy"))
 		{

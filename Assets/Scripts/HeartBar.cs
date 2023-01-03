@@ -36,7 +36,7 @@ public class HeartBar : MonoBehaviour
 	{
 		float maxHealthRemainder = PlayerController.current.maxHealth % 2;
 		int heartsToMake = (int)((PlayerController.current.maxHealth / 2) + maxHealthRemainder);
-
+		ClearHearts();
 		for (int i = 0; i < heartsToMake; i++)
 		{
 			CreateEmptyHeart();
