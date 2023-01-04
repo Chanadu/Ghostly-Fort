@@ -4,31 +4,31 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: -9204222093868467741
-    second: Icons SpriteSheet_0
+    second: OrangeIcon
   - first:
       213: -5658380571578984850
-    second: Icons SpriteSheet_1
+    second: BlueIcon
   - first:
       213: -1559824904055157755
-    second: Icons SpriteSheet_2
+    second: GreenIcon
   - first:
       213: 7136299815219576162
-    second: Icons SpriteSheet_3
+    second: ClickedOrangeIcon
   - first:
       213: -4380412213919799895
-    second: Icons SpriteSheet_4
+    second: ClickedBlueIcon
   - first:
       213: 9081174685496601592
-    second: Icons SpriteSheet_5
+    second: ClickedGreenIcon
   - first:
       213: -784781731042829973
-    second: Icons SpriteSheet_6
+    second: EmptyHeart
   - first:
       213: -4039383993593613399
-    second: Icons SpriteSheet_7
+    second: HalfHeart
   - first:
       213: -7918191317903281529
-    second: Icons SpriteSheet_8
+    second: FullHeart
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -162,7 +162,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Icons SpriteSheet_0
+      name: OrangeIcon
       rect:
         serializedVersion: 2
         x: 0
@@ -170,7 +170,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -183,7 +183,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons SpriteSheet_1
+      name: BlueIcon
       rect:
         serializedVersion: 2
         x: 16
@@ -191,7 +191,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -204,7 +204,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons SpriteSheet_2
+      name: GreenIcon
       rect:
         serializedVersion: 2
         x: 32
@@ -212,7 +212,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -225,7 +225,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons SpriteSheet_3
+      name: ClickedOrangeIcon
       rect:
         serializedVersion: 2
         x: 0
@@ -233,7 +233,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -246,7 +246,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons SpriteSheet_4
+      name: ClickedBlueIcon
       rect:
         serializedVersion: 2
         x: 16
@@ -254,7 +254,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -267,7 +267,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons SpriteSheet_5
+      name: ClickedGreenIcon
       rect:
         serializedVersion: 2
         x: 32
@@ -275,7 +275,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -288,7 +288,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons SpriteSheet_6
+      name: EmptyHeart
       rect:
         serializedVersion: 2
         x: 0
@@ -296,7 +296,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -309,7 +309,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons SpriteSheet_7
+      name: HalfHeart
       rect:
         serializedVersion: 2
         x: 16
@@ -317,7 +317,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -330,7 +330,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons SpriteSheet_8
+      name: FullHeart
       rect:
         serializedVersion: 2
         x: 32
@@ -338,7 +338,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

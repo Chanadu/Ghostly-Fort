@@ -12,6 +12,8 @@ public class EnemySpawner : MonoBehaviour
 	public int current;
 	public float timeToSpawn;
 	private float currentTimeToSpawn;
+
+	public Vector2 targetLocation;
 	// Start is called before the first frame update
 	void Start()
 	{
@@ -29,9 +31,11 @@ public class EnemySpawner : MonoBehaviour
 
 	private void FixedUpdate()
 	{
-		if (!target[current].position.Equals(transform.position))
+		if (!(target[current].position.x == transform.position.x && (target[current].position.y == transform.position.y)))
 		{
-			transform.position = Vector3.MoveTowards(transform.position, target[current].position, speed * Time.deltaTime);
+			transform.position = Vector2.MoveTowards(transform.position, target[current].position, speed * Time.deltaTime);
+			Debug.Log("Moving" + " Speed = " + speed);
+			targetLocation = target[current].position;
 		}
 		else
 		{
@@ -40,6 +44,7 @@ public class EnemySpawner : MonoBehaviour
 			{
 				current = 0;
 			}
+			Debug.Log("Increased");
 		}
 
 	}

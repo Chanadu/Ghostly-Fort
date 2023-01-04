@@ -4,13 +4,13 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: -8232701364970639092
-    second: OrangeEnemyRight
+    second: OrangeEnemy
   - first:
       213: -6218524336908003064
-    second: Character SpriteSheet_1
+    second: BlueEnemy
   - first:
       213: 8963319928600036832
-    second: Character SpriteSheet_2
+    second: GreenEnemy
   - first:
       213: -1068320832312605719
     second: Character SpriteSheet_3
@@ -22,13 +22,13 @@ TextureImporter:
     second: Character SpriteSheet_5
   - first:
       213: 3912841738430805762
-    second: Character SpriteSheet_6
+    second: OrangeWeapon
   - first:
       213: 5609458169402178169
-    second: Character SpriteSheet_7
+    second: BlueWeapon
   - first:
       213: -6847402176113707246
-    second: Character SpriteSheet_8
+    second: GreenWeapon
   - first:
       213: 7238210288554213309
     second: Character SpriteSheet_9
@@ -40,13 +40,13 @@ TextureImporter:
     second: Character SpriteSheet_11
   - first:
       213: -2886135558353331219
-    second: Character SpriteSheet_12
+    second: SnowmanRight
   - first:
       213: -8217460337354564094
-    second: Character SpriteSheet_13
+    second: SnowmanStraight
   - first:
       213: -4399618756995393697
-    second: Character SpriteSheet_14
+    second: SnowmanLeft
   - first:
       213: -5000824708590468353
     second: Character SpriteSheet_15
@@ -58,16 +58,16 @@ TextureImporter:
     second: Character SpriteSheet_17
   - first:
       213: -2063153063646399660
-    second: Character SpriteSheet_18
+    second: OrangeProjectile
   - first:
       213: -1295335679093087933
-    second: Character SpriteSheet_19
+    second: BlueProjectile
   - first:
       213: -5417045660253730145
-    second: Character SpriteSheet_20
+    second: GreenProjectile
   - first:
       213: 1241919066337952140
-    second: Character SpriteSheet_21
+    second: Coin
   - first:
       213: 4069900629911657332
     second: Character SpriteSheet_22
@@ -207,7 +207,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: OrangeEnemyRight
+      name: OrangeEnemy
       rect:
         serializedVersion: 2
         x: 0
@@ -215,7 +215,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -228,7 +228,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character SpriteSheet_1
+      name: BlueEnemy
       rect:
         serializedVersion: 2
         x: 16
@@ -236,7 +236,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -249,7 +249,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character SpriteSheet_2
+      name: GreenEnemy
       rect:
         serializedVersion: 2
         x: 32
@@ -257,7 +257,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -270,70 +270,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character SpriteSheet_3
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9e38bdbfcdf8c21f0800000000000000
-      internalID: -1068320832312605719
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Character SpriteSheet_4
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 16423192f2aaae850800000000000000
-      internalID: 6407120539417257057
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Character SpriteSheet_5
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fb8b0ac46ad708070800000000000000
-      internalID: 8106617482470537407
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Character SpriteSheet_6
+      name: OrangeWeapon
       rect:
         serializedVersion: 2
         x: 0
@@ -341,7 +278,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -354,7 +291,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character SpriteSheet_7
+      name: BlueWeapon
       rect:
         serializedVersion: 2
         x: 16
@@ -362,7 +299,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -375,7 +312,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character SpriteSheet_8
+      name: GreenWeapon
       rect:
         serializedVersion: 2
         x: 32
@@ -383,7 +320,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -396,70 +333,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character SpriteSheet_9
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dbff9d268e9437460800000000000000
-      internalID: 7238210288554213309
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Character SpriteSheet_10
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 073291a8d6f6687f0800000000000000
-      internalID: -610678183203101840
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Character SpriteSheet_11
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 85f912f8ecf304570800000000000000
-      internalID: 8448823057344208728
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Character SpriteSheet_12
+      name: SnowmanRight
       rect:
         serializedVersion: 2
         x: 0
@@ -467,7 +341,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -480,7 +354,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character SpriteSheet_13
+      name: SnowmanStraight
       rect:
         serializedVersion: 2
         x: 16
@@ -488,7 +362,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -501,7 +375,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character SpriteSheet_14
+      name: SnowmanLeft
       rect:
         serializedVersion: 2
         x: 32
@@ -509,7 +383,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -522,70 +396,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character SpriteSheet_15
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ff2087c4c60899ab0800000000000000
-      internalID: -5000824708590468353
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Character SpriteSheet_16
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d2ca76c001b3fa260800000000000000
-      internalID: 7110967276754938925
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Character SpriteSheet_17
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 63da785326bd5ecd0800000000000000
-      internalID: -2529374400847303370
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Character SpriteSheet_18
+      name: OrangeProjectile
       rect:
         serializedVersion: 2
         x: 0
@@ -593,7 +404,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -606,7 +417,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character SpriteSheet_19
+      name: BlueProjectile
       rect:
         serializedVersion: 2
         x: 16
@@ -614,7 +425,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -627,7 +438,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character SpriteSheet_20
+      name: GreenProjectile
       rect:
         serializedVersion: 2
         x: 32
@@ -635,7 +446,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -648,7 +459,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character SpriteSheet_21
+      name: Coin
       rect:
         serializedVersion: 2
         x: 48
@@ -656,7 +467,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -664,48 +475,6 @@ TextureImporter:
       bones: []
       spriteID: c81cbd49fce2c3110800000000000000
       internalID: 1241919066337952140
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Character SpriteSheet_22
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 47bd5054f013b7830800000000000000
-      internalID: 4069900629911657332
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Character SpriteSheet_23
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 87c869329ec8a1b40800000000000000
-      internalID: 5411792835191409784
       vertices: []
       indices: 
       edges: []

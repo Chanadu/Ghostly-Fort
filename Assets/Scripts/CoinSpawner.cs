@@ -11,7 +11,7 @@ public class CoinSpawner : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
 	{
-		timeToSpawn = Random.Range(2.0f, 5.0f);
+		timeToSpawn = Random.Range(4.5f, 7.0f);
 		currentTimeToSpawn = timeToSpawn;
 	}
 
@@ -33,8 +33,7 @@ public class CoinSpawner : MonoBehaviour
 
 			if (timeToSpawn > 2)
 			{
-				Random.Range(3.0f, 7.0f);
-				timeToSpawn -= Random.Range(0.1f, 0.4f);
+				timeToSpawn = Random.Range(4.5f, 7.0f);
 			}
 			currentTimeToSpawn = timeToSpawn;
 		}
