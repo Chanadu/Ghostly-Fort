@@ -1,10 +1,12 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Target : MonoBehaviour
 {
+	public static event Action OnTargetDeath;
 	public static Target current;
 	public TMPro.TextMeshProUGUI targetText;
 	public int startingTargetHealth;
@@ -29,6 +31,16 @@ public class Target : MonoBehaviour
 		{
 			Enemy e = other.gameObject.GetComponent<Enemy>();
 			e.attackingFort = true;
+		}
+	}
+
+	public void AttackFort(int damage)
+	{
+		currentTargetHealth -= damage;
+		if (currentTargetHealth <= 0)
+		{
+			currentTargetHealth = 0;
+			OnTargetDeath?.Invoke();
 		}
 	}
 }

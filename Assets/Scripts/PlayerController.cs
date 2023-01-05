@@ -1,9 +1,11 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+	public static event Action OnPlayerDeath;
 	public static PlayerController current;
 	public Camera sceneCamera;
 	public float moveSpeed;
@@ -20,6 +22,19 @@ public class PlayerController : MonoBehaviour
 	public IDictionary<int, Sprite> numToSprite;
 	public int currentWeapon = 0;
 	public SpriteRenderer weaponSpriteRenderer;
+	private bool over = false;
+	private void OnEnable()
+	{
+		OnPlayerDeath += DisableAll;
+		Target.OnTargetDeath += DisableAll;
+	}
+
+	private void OnDisable()
+	{
+		OnPlayerDeath -= DisableAll;
+		Target.OnTargetDeath -= DisableAll;
+	}
+
 	void Start()
 	{
 		current = this;
@@ -32,8 +47,8 @@ public class PlayerController : MonoBehaviour
 		};
 
 		weaponSpriteRenderer.sprite = numToSprite[currentWeapon];
+		EnableAll();
 	}
-
 	void Update()
 	{
 		ProcessInputs();
@@ -47,6 +62,10 @@ public class PlayerController : MonoBehaviour
 
 	void ProcessInputs()
 	{
+		if (over)
+		{
+			return;
+		}
 		float moveX = Input.GetAxisRaw("Horizontal");
 		float moveY = Input.GetAxisRaw("Vertical");
 
@@ -102,6 +121,11 @@ public class PlayerController : MonoBehaviour
 		{
 			health -= damageAmount;
 			currentDamageCooldown = damageTickCooldown;
+			if (health <= 0)
+			{
+				health = 0;
+				OnPlayerDeath?.Invoke();
+			}
 		}
 
 	}
@@ -112,6 +136,20 @@ public class PlayerController : MonoBehaviour
 		{
 			currentDamageCooldown -= Time.deltaTime;
 		}
+	}
+
+	private void DisableAll()
+	{
+		rb.bodyType = RigidbodyType2D.Static;
+		EnemyPooler.current.DisableEnemies();
+		over = true;
+
+	}
+
+	private void EnableAll()
+	{
+		rb.bodyType = RigidbodyType2D.Dynamic;
+		EnemyPooler.current.EnableEnemies();
 	}
 
 }

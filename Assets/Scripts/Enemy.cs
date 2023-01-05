@@ -16,6 +16,7 @@ public class Enemy : MonoBehaviour
 	public bool attackingFort = false;
 	private readonly float timeToAttack = 1f;
 	private float currentTimeToAttack = 0;
+	private bool over = false;
 	// Start is called before the first frame update
 	void Start()
 	{
@@ -44,6 +45,10 @@ public class Enemy : MonoBehaviour
 
 	private void Update()
 	{
+		if (over)
+		{
+			return;
+		}
 		if (attackingFort && gameObject.activeInHierarchy)
 		{
 			AttackFort();
@@ -80,7 +85,7 @@ public class Enemy : MonoBehaviour
 
 	private void FixedUpdate()
 	{
-		if (player)
+		if (player && !over)
 		{
 			rb.velocity = new Vector2(moveDirection.x, moveDirection.y) * moveSpeed;
 		}
@@ -94,7 +99,7 @@ public class Enemy : MonoBehaviour
 		}
 		else
 		{
-			target.gameObject.GetComponent<Target>().currentTargetHealth -= 5;
+			target.gameObject.GetComponent<Target>().AttackFort(5);
 			currentTimeToAttack = timeToAttack;
 		}
 	}
@@ -124,5 +129,15 @@ public class Enemy : MonoBehaviour
 		attackingFort = false;
 		currentTimeToAttack = timeToAttack;
 		Score.current.score += 10;
+	}
+
+	public void EnableEnemy()
+	{
+		rb.bodyType = RigidbodyType2D.Dynamic;
+	}
+
+	public void DisableEnemy()
+	{
+		rb.bodyType = RigidbodyType2D.Static;
 	}
 }

@@ -34,7 +34,6 @@ public class EnemySpawner : MonoBehaviour
 		if (!(target[current].position.x == transform.position.x && (target[current].position.y == transform.position.y)))
 		{
 			transform.position = Vector2.MoveTowards(transform.position, target[current].position, speed * Time.deltaTime);
-			Debug.Log("Moving" + " Speed = " + speed);
 			targetLocation = target[current].position;
 		}
 		else
@@ -44,7 +43,6 @@ public class EnemySpawner : MonoBehaviour
 			{
 				current = 0;
 			}
-			Debug.Log("Increased");
 		}
 
 	}

@@ -57,4 +57,20 @@ public class EnemyPooler : MonoBehaviour
 		}
 		return null;
 	}
+
+	public void DisableEnemies()
+	{
+		foreach (GameObject obj in pooledObjects)
+		{
+			obj.GetComponent<Enemy>().DisableEnemy();
+		}
+	}
+
+	public void EnableEnemies()
+	{
+		foreach (GameObject obj in pooledObjects)
+		{
+			obj.GetComponent<Enemy>().EnableEnemy();
+		}
+	}
 }
