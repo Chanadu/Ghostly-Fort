@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class CoinSpawner : MonoBehaviour
 {
+	public static CoinSpawner current;
 	public Transform objectToSpawnParent;
 	private float timeToSpawn;
 	private float currentTimeToSpawn;
 	public Transform player;
+	private bool disabled = false;
 	// Start is called before the first frame update
 	void Start()
 	{
+		current = this;
 		timeToSpawn = Random.Range(4.5f, 7.0f);
 		currentTimeToSpawn = timeToSpawn;
 	}
@@ -18,6 +21,10 @@ public class CoinSpawner : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
+		if (disabled)
+		{
+			return;
+		}
 		UpdateTimer();
 	}
 
@@ -50,5 +57,15 @@ public class CoinSpawner : MonoBehaviour
 			float y = Random.Range(player.position.y - 5, player.position.y + 5);
 			obj.transform.SetPositionAndRotation(new Vector2(x, y), Quaternion.identity);
 		}
+	}
+
+	public void Disable()
+	{
+		disabled = true;
+	}
+
+	public void Enable()
+	{
+		disabled = false;
 	}
 }

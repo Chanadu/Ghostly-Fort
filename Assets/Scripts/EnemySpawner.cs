@@ -17,10 +17,9 @@ public class EnemySpawner : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
 	{
-		timeToSpawn = Random.Range(4.0f, 7.0f);
-		currentTimeToSpawn = timeToSpawn;
+		currentTimeToSpawn = startingSpawnTime;
 		current = 0;
-		speed = Random.Range(2, 7);
+		speed = Random.Range(3.0f, 7.0f);
 	}
 
 	// Update is called once per frame
@@ -57,11 +56,12 @@ public class EnemySpawner : MonoBehaviour
 		{
 			SpawnObject();
 
-			if (timeToSpawn > 2)
+			timeToSpawn -= Random.Range(0.2f, 0.5f);
+			if (timeToSpawn > 0.25f)
 			{
-				Random.Range(3.0f, 7.0f);
-				timeToSpawn -= Random.Range(0.01f, 0.3f);
+				timeToSpawn = 0.25f;
 			}
+
 			currentTimeToSpawn = timeToSpawn;
 		}
 	}

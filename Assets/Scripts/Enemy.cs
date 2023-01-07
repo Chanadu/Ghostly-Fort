@@ -35,7 +35,6 @@ public class Enemy : MonoBehaviour
 				moveSpeed = Random.Range(3f, 4f);
 				break;
 		}
-		moveSpeed = Random.Range(2f, 4f);
 	}
 	private void Awake()
 	{
@@ -134,10 +133,12 @@ public class Enemy : MonoBehaviour
 	public void EnableEnemy()
 	{
 		rb.bodyType = RigidbodyType2D.Dynamic;
+		over = false;
 	}
 
 	public void DisableEnemy()
 	{
 		rb.bodyType = RigidbodyType2D.Static;
+		over = true;
 	}
 }

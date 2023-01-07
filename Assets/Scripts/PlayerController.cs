@@ -142,6 +142,7 @@ public class PlayerController : MonoBehaviour
 	{
 		rb.bodyType = RigidbodyType2D.Static;
 		EnemyPooler.current.DisableEnemies();
+		CoinSpawner.current.Disable();
 		over = true;
 
 	}
@@ -150,6 +151,8 @@ public class PlayerController : MonoBehaviour
 	{
 		rb.bodyType = RigidbodyType2D.Dynamic;
 		EnemyPooler.current.EnableEnemies();
+		CoinSpawner.current.Enable();
+		over = false;
 	}
 
 }

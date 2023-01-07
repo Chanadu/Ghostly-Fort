@@ -1,10 +1,5 @@
 Things TODO
 
-- Tutorial
-	- Coins
-	- Health
-		- Both
-- Make the Game Easier
-	- Make the game start ALOT slowers but speed up faster
+
 - Add Levels? 
 	- Calculate by enemy spawner speed for example: level 1 reached by enemyspawner speed being 5
