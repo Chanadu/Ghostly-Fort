@@ -1,22 +1,10 @@
 Things TODO
 
-- End Game Screen
-	- On Player Health Gone
-	- On Safe Health Gone
-	- Final Score gained by time + enemies killed
-- Draw Artwork
-	- Backgrounds
-		- Title Screen
-		- Credits
-		- Settings
 - Tutorial
-	- Shooting and Moving Mechanics
-		- Different Colors
-			- Switching between Ammos
-
-- Title Screen
-	- Title
-	- Settings Button
-	- Credits Button
-	- Play Button
-	- Tutorial Button
+	- Coins
+	- Health
+		- Both
+- Make the Game Easier
+	- Make the game start ALOT slowers but speed up faster
+- Add Levels? 
+	- Calculate by enemy spawner speed for example: level 1 reached by enemyspawner speed being 5
