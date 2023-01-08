@@ -18,17 +18,6 @@ public class GameTimer : MonoBehaviour
 	{
 		current = this;
 	}
-	private void OnEnable()
-	{
-		PlayerController.OnPlayerDeath += StopTime;
-		Target.OnTargetDeath += StopTime;
-	}
-
-	private void OnDisable()
-	{
-		PlayerController.OnPlayerDeath -= StopTime;
-		Target.OnTargetDeath -= StopTime;
-	}
 
 	void Update()
 	{
@@ -72,8 +61,13 @@ public class GameTimer : MonoBehaviour
 		return arr;
 	}
 
-	private void StopTime()
+	public void StopTime()
 	{
 		stop = true;
+	}
+
+	public void StartTime()
+	{
+		stop = false;
 	}
 }

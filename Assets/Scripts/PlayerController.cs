@@ -22,18 +22,8 @@ public class PlayerController : MonoBehaviour
 	public IDictionary<int, Sprite> numToSprite;
 	public int currentWeapon = 0;
 	public SpriteRenderer weaponSpriteRenderer;
-	private bool over = false;
-	private void OnEnable()
-	{
-		OnPlayerDeath += DisableAll;
-		Target.OnTargetDeath += DisableAll;
-	}
+	public bool over = false;
 
-	private void OnDisable()
-	{
-		OnPlayerDeath -= DisableAll;
-		Target.OnTargetDeath -= DisableAll;
-	}
 
 	void Start()
 	{
@@ -47,7 +37,6 @@ public class PlayerController : MonoBehaviour
 		};
 
 		weaponSpriteRenderer.sprite = numToSprite[currentWeapon];
-		EnableAll();
 	}
 	void Update()
 	{
@@ -136,23 +125,6 @@ public class PlayerController : MonoBehaviour
 		{
 			currentDamageCooldown -= Time.deltaTime;
 		}
-	}
-
-	private void DisableAll()
-	{
-		rb.bodyType = RigidbodyType2D.Static;
-		EnemyPooler.current.DisableEnemies();
-		CoinSpawner.current.Disable();
-		over = true;
-
-	}
-
-	private void EnableAll()
-	{
-		rb.bodyType = RigidbodyType2D.Dynamic;
-		EnemyPooler.current.EnableEnemies();
-		CoinSpawner.current.Enable();
-		over = false;
 	}
 
 }

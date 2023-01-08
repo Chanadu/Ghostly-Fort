@@ -6,19 +6,12 @@ using UnityEngine.SceneManagement;
 public class SceneUiManager : MonoBehaviour
 {
 	public GameObject gameOverMenu;
+	public static SceneUiManager current;
 
-	private void OnEnable()
+	private void Start()
 	{
-		PlayerController.OnPlayerDeath += EnableGameOverMenu;
-		Target.OnTargetDeath += EnableGameOverMenu;
+		current = this;
 	}
-
-	private void OnDisable()
-	{
-		PlayerController.OnPlayerDeath -= EnableGameOverMenu;
-		Target.OnTargetDeath -= EnableGameOverMenu;
-	}
-
 	public void EnableGameOverMenu()
 	{
 		gameOverMenu.SetActive(true);
@@ -32,5 +25,11 @@ public class SceneUiManager : MonoBehaviour
 	public void MainMenu()
 	{
 		SceneManager.LoadScene(0);
+	}
+
+	public void ClosePauseMenu()
+	{
+		PauseMenuHandler.current.SetOpen(false);
+		Disabler.current.EnableAll();
 	}
 }

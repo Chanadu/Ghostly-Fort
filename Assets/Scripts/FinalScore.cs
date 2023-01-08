@@ -14,12 +14,15 @@ public class FinalScore : MonoBehaviour
 	IEnumerator CountUpToTargetScore()
 	{
 		float currentDisplayScore = 0;
-		int s = Score.current.score + Mathf.FloorToInt((GameTimer.current.GetTime()[0] * 60 + GameTimer.current.GetTime()[1]) / 5) * 5;
+		int s = Score.current.score + GameTimer.current.GetTime()[0] * 60 + GameTimer.current.GetTime()[1];
 		if (currentDisplayScore >= s || s == 0)
 		{
 			finalScore.text = "Final Score: 0";
 		}
-		int countSpeed = s < 500 ? 1 : 5;
+		int countSpeed =
+					s < 250 ? 1
+					: s < 750 ? 5
+					: 10;
 
 		while (currentDisplayScore < s)
 		{

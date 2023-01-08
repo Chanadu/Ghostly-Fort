@@ -1,5 +1,3 @@
 Things TODO
 
-
-- Add Levels? 
-	- Calculate by enemy spawner speed for example: level 1 reached by enemyspawner speed being 5
+Done I think

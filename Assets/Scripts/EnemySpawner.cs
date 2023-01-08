@@ -12,7 +12,7 @@ public class EnemySpawner : MonoBehaviour
 	public int current;
 	public float timeToSpawn;
 	private float currentTimeToSpawn;
-
+	public bool over = false;
 	public Vector2 targetLocation;
 	// Start is called before the first frame update
 	void Start()
@@ -25,11 +25,19 @@ public class EnemySpawner : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
+		if (over)
+		{
+			return;
+		}
 		UpdateTimer();
 	}
 
 	private void FixedUpdate()
 	{
+		if (over)
+		{
+			return;
+		}
 		if (!(target[current].position.x == transform.position.x && (target[current].position.y == transform.position.y)))
 		{
 			transform.position = Vector2.MoveTowards(transform.position, target[current].position, speed * Time.deltaTime);
@@ -57,7 +65,7 @@ public class EnemySpawner : MonoBehaviour
 			SpawnObject();
 
 			timeToSpawn -= Random.Range(0.2f, 0.5f);
-			if (timeToSpawn > 0.25f)
+			if (timeToSpawn < 0.25f)
 			{
 				timeToSpawn = 0.25f;
 			}
@@ -76,5 +84,15 @@ public class EnemySpawner : MonoBehaviour
 			obj.transform.SetPositionAndRotation(transform.position, Quaternion.identity);
 			obj.transform.position = new Vector3(obj.transform.position.x, obj.transform.position.y, 0);
 		}
+	}
+
+	public void Enable()
+	{
+		over = false;
+	}
+
+	public void Disable()
+	{
+		over = true;
 	}
 }
