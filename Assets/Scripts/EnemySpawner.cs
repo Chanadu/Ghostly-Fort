@@ -64,7 +64,7 @@ public class EnemySpawner : MonoBehaviour
 		{
 			SpawnObject();
 
-			timeToSpawn -= Random.Range(0.2f, 0.5f);
+			timeToSpawn -= Random.Range(0.2f, 0.3f);
 			if (timeToSpawn < 0.25f)
 			{
 				timeToSpawn = 0.25f;
