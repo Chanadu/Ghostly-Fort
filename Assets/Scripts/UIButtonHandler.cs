@@ -19,4 +19,10 @@ public class UIButtonHandler : MonoBehaviour
 	{
 		SceneManager.LoadScene(1);
 	}
+
+
+	public void CreditMenu()
+	{
+		SceneManager.LoadScene(3);
+	}
 }

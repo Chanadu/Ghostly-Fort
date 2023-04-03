@@ -10,6 +10,7 @@ public class CoinSpawner : MonoBehaviour
 	private float currentTimeToSpawn;
 	public Transform player;
 	private bool disabled = false;
+	public Transform[] spawnPositions;
 	// Start is called before the first frame update
 	void Start()
 	{
@@ -46,16 +47,18 @@ public class CoinSpawner : MonoBehaviour
 		}
 	}
 
-	private void SpawnObject()
+	public void SpawnObject()
 	{
 		GameObject obj = CoinPooler.current.GetPooledObject();
 		if (obj)
 		{
-			obj.SetActive(true);
 			obj.transform.SetParent(objectToSpawnParent, true);
-			float x = Random.Range(player.position.x - 5, player.position.x + 5);
-			float y = Random.Range(player.position.y - 5, player.position.y + 5);
+			int r = Random.Range(0, spawnPositions.Length);
+			float x = spawnPositions[r].position.x;
+			float y = spawnPositions[r].position.y;
 			obj.transform.SetPositionAndRotation(new Vector2(x, y), Quaternion.identity);
+
+			obj.SetActive(true);
 		}
 	}
 

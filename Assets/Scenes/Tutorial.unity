@@ -394,7 +394,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: left click to shoot .
+  m_text: left  click  to  shoot.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3f6de8b54e5c0cc40ab4405b6e80a7b4, type: 2}
   m_sharedMaterial: {fileID: 7800291724175469408, guid: 3f6de8b54e5c0cc40ab4405b6e80a7b4,
@@ -429,8 +429,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -512,7 +512,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 17.7, y: -72.2}
+  m_AnchoredPosition: {x: -0.0000076294, y: -77}
   m_SizeDelta: {x: 255.36981, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &721471058
@@ -534,7 +534,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: your health
+  m_text: your  health
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3f6de8b54e5c0cc40ab4405b6e80a7b4, type: 2}
   m_sharedMaterial: {fileID: 7800291724175469408, guid: 3f6de8b54e5c0cc40ab4405b6e80a7b4,
@@ -721,8 +721,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 556, y: -28}
-  m_SizeDelta: {x: 458.56177, y: 116.00134}
+  m_AnchoredPosition: {x: 547.2, y: -28}
+  m_SizeDelta: {x: 476.32977, y: 116.00134}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &812036303
 MonoBehaviour:
@@ -743,7 +743,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: right click to switch between colors .
+  m_text: right  click  to  switch  colors.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3f6de8b54e5c0cc40ab4405b6e80a7b4, type: 2}
   m_sharedMaterial: {fileID: 7800291724175469408, guid: 3f6de8b54e5c0cc40ab4405b6e80a7b4,
@@ -877,7 +877,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'target health: 50/100'
+  m_text: 'target health:  50/100'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3f6de8b54e5c0cc40ab4405b6e80a7b4, type: 2}
   m_sharedMaterial: {fileID: 7800291724175469408, guid: 3f6de8b54e5c0cc40ab4405b6e80a7b4,
@@ -1011,7 +1011,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: walk over to a coin to gain more score.
+  m_text: gain  score  with  coins!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3f6de8b54e5c0cc40ab4405b6e80a7b4, type: 2}
   m_sharedMaterial: {fileID: 7800291724175469408, guid: 3f6de8b54e5c0cc40ab4405b6e80a7b4,
@@ -1605,8 +1605,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 493.97, y: -254}
-  m_SizeDelta: {x: 612.0693, y: 221.93231}
+  m_AnchoredPosition: {x: 476.8, y: -259.4}
+  m_SizeDelta: {x: 578.13214, y: 146.76526}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2037355600
 MonoBehaviour:
@@ -1627,8 +1627,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: be sure to protect both your health and your target's heath. you lose health
-    by getting hit by ghosts.
+  m_text: protect  yourself  and  the  fort  from  the  ghosts!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3f6de8b54e5c0cc40ab4405b6e80a7b4, type: 2}
   m_sharedMaterial: {fileID: 7800291724175469408, guid: 3f6de8b54e5c0cc40ab4405b6e80a7b4,
@@ -1663,8 +1662,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0

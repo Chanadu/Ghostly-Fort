@@ -23,11 +23,14 @@ public class Coin : MonoBehaviour
 			Disable();
 		}
 	}
-	
-    void OnTriggerEnter2D(Collider2D other)
+
+	void OnTriggerEnter2D(Collider2D other)
 	{
-		Score.current.score += 100;
-		Disable();
+		if (other.gameObject.CompareTag("Player"))
+		{
+			Score.current.score += 100;
+			Disable();
+		}
 	}
 
 	public void Disable()
