@@ -127,7 +127,7 @@ public class Enemy : MonoBehaviour
 		currentHealth = maxHealth;
 		attackingFort = false;
 		currentTimeToAttack = timeToAttack;
-		Score.current.score += 10;
+		Score.current.IncreaseScore(10);
 	}
 
 	public void EnableEnemy()

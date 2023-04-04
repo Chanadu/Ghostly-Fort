@@ -28,7 +28,7 @@ public class Coin : MonoBehaviour
 	{
 		if (other.gameObject.CompareTag("Player"))
 		{
-			Score.current.score += 100;
+			Score.current.IncreaseScore(100);
 			Disable();
 		}
 	}

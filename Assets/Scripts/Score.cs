@@ -5,17 +5,34 @@ using UnityEngine.UI;
 
 public class Score : MonoBehaviour
 {
-	public static Score current;
-	public TMPro.TextMeshProUGUI scoreText;
-	public int score;
-	// Start is called before the first frame update
-	void Start()
+	private static Score _current;
+	public static Score current
 	{
-		current = this;
+		get
+		{
+			if (!_current)
+			{
+				_current = new GameObject().AddComponent<Score>();
+				DontDestroyOnLoad(_current.gameObject);
+			}
+			return _current;
+		}
 	}
 
-	private void Update()
+
+	public int score = 0;
+	public int highScore = 0;
+	public void IncreaseScore(int s)
 	{
-		scoreText.text = "Score: " + score;
+		score += s;
+		if (score > highScore)
+		{
+			highScore = score;
+			print("New HighScore!" + " Score: " + score);
+		}
+		else
+		{
+			print("new Score" + " Score: " + score);
+		}
 	}
 }

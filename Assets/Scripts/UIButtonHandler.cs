@@ -25,4 +25,9 @@ public class UIButtonHandler : MonoBehaviour
 	{
 		SceneManager.LoadScene(3);
 	}
+
+	public void HighScoreMenu()
+	{
+		SceneManager.LoadScene(4);
+	}
 }
